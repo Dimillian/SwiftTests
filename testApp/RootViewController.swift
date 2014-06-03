@@ -43,6 +43,7 @@ class RootViewController: UIViewController {
         button.setTitle("Touche Me", forState: UIControlState.Normal)
         button.addTarget(self, action: "onButton:", forControlEvents: UIControlEvents.TouchUpInside)
         visualEffectView.contentView.addSubview(button)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +53,7 @@ class RootViewController: UIViewController {
     
     func toggleScale() {
         UIView.animateWithDuration(0.50, animations: {
-            var scale = self.toggled ? 1.0 : 0.50
+            var scale: Float = self.toggled ? 1.0 : 0.50
             self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale)
             self.imageView.center = self.view.center
         })
@@ -60,5 +61,9 @@ class RootViewController: UIViewController {
     
     func onButton(sender: AnyObject) {
         self.toggled = !self.toggled
+    }
+    
+    func onSearchButton(sender: AnyObject) {
+        
     }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class MainController: NSObject {
    
+    let networkManager = AFHTTPRequestOperationManager()
     var appDelegate: AppDelegate?
     var rootViewController = RootViewController(nibName: nil, bundle: nil)
     
@@ -20,5 +21,15 @@ class MainController: NSObject {
         var navController = UINavigationController(rootViewController: self.rootViewController)
         navController.navigationBarCondensed = true
         self.appDelegate!.window!.rootViewController = navController
+        
+        self.cocoapodsDemo()
+    }
+    
+    func cocoapodsDemo() {
+        self.networkManager.GET("http://google.fr", parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
+                println(responseObject)
+            },
+            failure: nil)
     }
 }

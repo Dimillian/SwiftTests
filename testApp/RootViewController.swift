@@ -10,6 +10,8 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    var imageView: UIImageView = UIImageView()
+    
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -21,9 +23,9 @@ class RootViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.redColor()
         
-        var imageView = UIImageView(frame: self.view.bounds)
-        imageView.image = UIImage(named: "business-of-literature-500")
-        self.view.addSubview(imageView)
+        self.imageView = UIImageView(frame: self.view.bounds)
+        self.imageView.image = UIImage(named: "business-of-literature-500")
+        self.view.addSubview(self.imageView)
         
         var visualEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var visualEffectView = UIVisualEffectView(effect: visualEffect)
@@ -43,7 +45,10 @@ class RootViewController: UIViewController {
     }
     
     func onButton(sender: AnyObject) {
-        
+        UIView.animateWithDuration(0.50, animations: {
+            self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.50, 0.50)
+            self.imageView.center = self.view.center
+        })
     }
 
     /*

@@ -18,6 +18,7 @@ class TodayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 50.0)
     }
     
     override func didReceiveMemoryWarning() {

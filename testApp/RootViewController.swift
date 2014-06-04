@@ -53,7 +53,7 @@ class RootViewController: UIViewController {
     
     func toggleScale() {
         UIView.animateWithDuration(0.50, animations: {
-            var scale: Float = self.toggled ? 1.0 : 0.50
+            var scale = self.toggled ? 1.0 : 0.50
             self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale)
             self.imageView.center = self.view.center
         })

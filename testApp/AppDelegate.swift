@@ -11,18 +11,24 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
-    var window: UIWindow?
-    var mainController: MainController?
+    var window: UIWindow!
+    var mainController: MainController!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // Override point for customization after application launch.
-        self.window!.backgroundColor = UIColor.whiteColor()
+        self.window.backgroundColor = UIColor.whiteColor()
         self.mainController = MainController(appDelegate: self)
-        self.window!.makeKeyAndVisible()
+        self.window.makeKeyAndVisible()
+        
+        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes:
+            UIUserNotificationType.Alert|UIUserNotificationType.Badge|UIUserNotificationType.Sound,
+            categories: nil))
+        
         return true
     }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

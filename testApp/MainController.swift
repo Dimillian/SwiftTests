@@ -11,16 +11,20 @@ import UIKit
 class MainController: NSObject {
    
     let networkManager = AFHTTPRequestOperationManager()
-    var appDelegate: AppDelegate?
+    var appDelegate: AppDelegate!
     var rootViewController = RootViewController(nibName: nil, bundle: nil)
     
     init(appDelegate: AppDelegate) {
         super.init()
         self.appDelegate = appDelegate;
         
-        var navController = UINavigationController(rootViewController: self.rootViewController)
-        navController.navigationBarCondensed = true
-        self.appDelegate!.window!.rootViewController = navController
+        if self.appDelegate {
+            var navController = UINavigationController(rootViewController: self.rootViewController)
+            navController.navigationBarCondensed = true
+            if self.appDelegate.window {
+                self.appDelegate.window.rootViewController = navController   
+            }
+        }
         
         self.cocoapodsDemo()
     }

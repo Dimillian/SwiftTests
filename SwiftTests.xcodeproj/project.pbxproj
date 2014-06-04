@@ -131,10 +131,10 @@
 		9F1A802C193D290D00E583E9 /* testApp */ = {
 			isa = PBXGroup;
 			children = (
+				9F2C42A0193F19D800B5ACE4 /* Extensions */,
 				9F1A802F193D290D00E583E9 /* AppDelegate.swift */,
 				9F1A8047193D292300E583E9 /* MainController.swift */,
 				9F30F0CC193DCFE000058B82 /* RootViewController.swift */,
-				9F2C429E193F152300B5ACE4 /* NSLayoutConstraintEXT.swift */,
 				9F1A8031193D290D00E583E9 /* Images.xcassets */,
 				9F1A802D193D290D00E583E9 /* Supporting Files */,
 				9FAD0FAF193E1642001D831F /* SwiftTests-Bridging-Header.h */,
@@ -165,6 +165,14 @@
 				9F1A803C193D290D00E583E9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F2C42A0193F19D800B5ACE4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9F2C429E193F152300B5ACE4 /* NSLayoutConstraintEXT.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		9F30F0D3193DD63900058B82 /* Frameworks */ = {

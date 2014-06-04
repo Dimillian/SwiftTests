@@ -29,7 +29,7 @@ class RootViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.redColor()
         
-        self.imageView = UIImageView(frame: self.view.bounds)
+        self.imageView = UIImageView(frame: CGRectZero)
         self.imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.imageView.image = UIImage(named: "business-of-literature-500")
         self.view.addSubview(self.imageView)
@@ -41,7 +41,6 @@ class RootViewController: UIViewController {
         
         var visualEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var visualEffectView = UIVisualEffectView(effect: visualEffect)
-        visualEffectView.frame = self.view.bounds
         visualEffectView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.view.addSubview(visualEffectView)
         

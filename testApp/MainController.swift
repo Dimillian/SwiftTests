@@ -22,7 +22,7 @@ class MainController: NSObject {
             var navController = UINavigationController(rootViewController: self.rootViewController)
             navController.navigationBarCondensed = true
             if self.appDelegate.window {
-                self.appDelegate.window.rootViewController = navController   
+                self.appDelegate.window.rootViewController = navController
             }
         }
         

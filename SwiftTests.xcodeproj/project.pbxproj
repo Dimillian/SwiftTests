@@ -11,6 +11,7 @@
 		9F1A8032193D290D00E583E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F1A8031193D290D00E583E9 /* Images.xcassets */; };
 		9F1A803E193D290D00E583E9 /* testAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A803D193D290D00E583E9 /* testAppTests.swift */; };
 		9F1A8048193D292300E583E9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A8047193D292300E583E9 /* MainController.swift */; };
+		9F2C429F193F152300B5ACE4 /* NSLayoutConstraintEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C429E193F152300B5ACE4 /* NSLayoutConstraintEXT.swift */; };
 		9F30F0CD193DCFE000058B82 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30F0CC193DCFE000058B82 /* RootViewController.swift */; };
 		9F30F0D5193DD63900058B82 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F30F0D4193DD63900058B82 /* NotificationCenter.framework */; };
 		9F30F0DA193DD63900058B82 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F30F0D9193DD63900058B82 /* TodayViewController.swift */; };
@@ -68,6 +69,7 @@
 		9F1A803C193D290D00E583E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F1A803D193D290D00E583E9 /* testAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAppTests.swift; sourceTree = "<group>"; };
 		9F1A8047193D292300E583E9 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		9F2C429E193F152300B5ACE4 /* NSLayoutConstraintEXT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintEXT.swift; sourceTree = "<group>"; };
 		9F30F0CC193DCFE000058B82 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		9F30F0D2193DD63900058B82 /* com.glose.SwiftTests.extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.glose.SwiftTests.extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F30F0D4193DD63900058B82 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -132,6 +134,7 @@
 				9F1A802F193D290D00E583E9 /* AppDelegate.swift */,
 				9F1A8047193D292300E583E9 /* MainController.swift */,
 				9F30F0CC193DCFE000058B82 /* RootViewController.swift */,
+				9F2C429E193F152300B5ACE4 /* NSLayoutConstraintEXT.swift */,
 				9F1A8031193D290D00E583E9 /* Images.xcassets */,
 				9F1A802D193D290D00E583E9 /* Supporting Files */,
 				9FAD0FAF193E1642001D831F /* SwiftTests-Bridging-Header.h */,
@@ -358,6 +361,7 @@
 				9F1A8048193D292300E583E9 /* MainController.swift in Sources */,
 				9F1A8030193D290D00E583E9 /* AppDelegate.swift in Sources */,
 				9F30F0CD193DCFE000058B82 /* RootViewController.swift in Sources */,
+				9F2C429F193F152300B5ACE4 /* NSLayoutConstraintEXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				PRODUCT_NAME = SwiftTests;
 				SWIFT_OBJC_BRIDGING_HEADER = "testApp/SwiftTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -503,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = SwiftTests;
 				SWIFT_OBJC_BRIDGING_HEADER = "testApp/SwiftTests-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

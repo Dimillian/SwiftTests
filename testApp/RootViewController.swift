@@ -30,19 +30,34 @@ class RootViewController: UIViewController {
         self.view.backgroundColor = UIColor.redColor()
         
         self.imageView = UIImageView(frame: self.view.bounds)
+        self.imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.imageView.image = UIImage(named: "business-of-literature-500")
         self.view.addSubview(self.imageView)
+        
+        var dic = ["imageView": self.imageView]
+
+        self.view.addConstraints(NSLayoutConstraint.simpleConstrain("H:|[imageView]|", views: dic))
+        self.view.addConstraints(NSLayoutConstraint.simpleConstrain("V:|[imageView]|", views: dic))
         
         var visualEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
         var visualEffectView = UIVisualEffectView(effect: visualEffect)
         visualEffectView.frame = self.view.bounds
+        visualEffectView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.view.addSubview(visualEffectView)
         
+        var viewContrainDic = ["visualView": visualEffectView]
+        self.view.addConstraints(NSLayoutConstraint.simpleConstrain("H:|[visualView]|", views: viewContrainDic))
+        self.view.addConstraints(NSLayoutConstraint.simpleConstrain("V:|[visualView]|", views: viewContrainDic))
         
-        var button = UIButton(frame: CGRectMake(10.0, 50.0, self.view.frame.size.width - 20.0, 50.0))
+        var button = UIButton(frame: CGRectZero)
+        button.setTranslatesAutoresizingMaskIntoConstraints(false)
         button.setTitle("Touche Me", forState: UIControlState.Normal)
         button.addTarget(self, action: "onButton:", forControlEvents: UIControlEvents.TouchUpInside)
         visualEffectView.contentView.addSubview(button)
+        
+        var buttonDic = ["button": button]
+        visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("H:|-20-[button]-20-|", views: buttonDic))
+        visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("V:|-150-[button]", views: buttonDic))
         
     }
 
@@ -53,7 +68,7 @@ class RootViewController: UIViewController {
     
     func toggleScale() {
         UIView.animateWithDuration(0.50, animations: {
-            var scale = self.toggled ? 1.0 : 0.50
+            var scale: Float = self.toggled ? 1.0 : 0.50
             self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale)
             self.imageView.center = self.view.center
         })
@@ -65,5 +80,14 @@ class RootViewController: UIViewController {
     
     func onSearchButton(sender: AnyObject) {
         
+    }
+    
+    override func willTransitionToTraitCollection(newCollection: UITraitCollection!,
+        withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator!) {
+        
+    }
+    
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator!) {
+        println(size)
     }
 }

@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ShareTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>actionTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>extension.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +38,16 @@
 			<true/>
 		</dict>
 		<key>9F30F0D1193DD63800058B82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FD35F3B193F31450052B96E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FD35F4F193F31680052B96E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

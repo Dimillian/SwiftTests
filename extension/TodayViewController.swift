@@ -9,7 +9,7 @@
 import UIKit
 import NotificationCenter
 
-class TodayViewController: UIViewController {
+class TodayViewController<NCWidgetProviding>: UIViewController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -18,7 +18,11 @@ class TodayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.preferredContentSize = CGSizeMake(self.view.frame.size.width, 50.0)
+        print("loaded")
+    }
+    
+    override func awakeFromNib() {
+        print("awake")
     }
     
     override func didReceiveMemoryWarning() {

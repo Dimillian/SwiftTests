@@ -21,6 +21,6 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     class func layoutSize() -> CGSize {
-        return CGSizeMake(50.0, 50.0)
+        return CGSizeMake(150.0, 150.0)
     }
 }

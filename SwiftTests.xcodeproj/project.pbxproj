@@ -19,6 +19,7 @@
 		9F30F0DF193DD63900058B82 /* com.glose.SwiftTests.extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9F30F0D2193DD63900058B82 /* com.glose.SwiftTests.extension.appex */; };
 		9F8998F9194077FA00D88976 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8998F8194077FA00D88976 /* CollectionViewController.swift */; };
 		9F8998FB194079CC00D88976 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8998FA194079CC00D88976 /* CollectionViewCell.swift */; };
+		9F8998FD194080AF00D88976 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8998FC194080AF00D88976 /* CollectionViewLayout.swift */; };
 		9FD35F41193F31450052B96E /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD35F40193F31450052B96E /* ActionViewController.swift */; };
 		9FD35F43193F31450052B96E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD35F42193F31450052B96E /* MainInterface.storyboard */; };
 		9FD35F46193F31450052B96E /* com.glose.SwiftTests.actionTest.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9FD35F3C193F31450052B96E /* com.glose.SwiftTests.actionTest.appex */; };
@@ -117,6 +118,7 @@
 		9F665E8A193F1DB600BC7DB3 /* TestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TestPlayground.playground; sourceTree = "<group>"; };
 		9F8998F8194077FA00D88976 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		9F8998FA194079CC00D88976 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9F8998FC194080AF00D88976 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		9FAD0FAF193E1642001D831F /* SwiftTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9FD35F3C193F31450052B96E /* com.glose.SwiftTests.actionTest.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = com.glose.SwiftTests.actionTest.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD35F3F193F31450052B96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				9F1A8047193D292300E583E9 /* MainController.swift */,
 				9F30F0CC193DCFE000058B82 /* RootViewController.swift */,
 				9F8998F8194077FA00D88976 /* CollectionViewController.swift */,
+				9F8998FC194080AF00D88976 /* CollectionViewLayout.swift */,
 				9F8998FA194079CC00D88976 /* CollectionViewCell.swift */,
 				9F1A8031193D290D00E583E9 /* Images.xcassets */,
 				9F1A802D193D290D00E583E9 /* Supporting Files */,
@@ -537,6 +540,7 @@
 				9F1A8048193D292300E583E9 /* MainController.swift in Sources */,
 				9F1A8030193D290D00E583E9 /* AppDelegate.swift in Sources */,
 				9F8998FB194079CC00D88976 /* CollectionViewCell.swift in Sources */,
+				9F8998FD194080AF00D88976 /* CollectionViewLayout.swift in Sources */,
 				9F30F0CD193DCFE000058B82 /* RootViewController.swift in Sources */,
 				9F2C429F193F152300B5ACE4 /* NSLayoutConstraintEXT.swift in Sources */,
 				9F8998F9194077FA00D88976 /* CollectionViewController.swift in Sources */,

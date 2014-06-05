@@ -10,8 +10,8 @@ import UIKit
 
 class CollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    var layout: UICollectionViewFlowLayout! =  nil
-    var collectionView: UICollectionView! = nil
+    var layout: CollectionViewLayout!
+    var collectionView: UICollectionView!
     
     init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)  {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -20,7 +20,7 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewDidLoad()  {
         super.viewDidLoad()
         
-        self.layout = UICollectionViewFlowLayout()
+        self.layout = CollectionViewLayout()
         self.collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: self.layout)
         self.collectionView.setCollectionViewLayout(layout, animated: false)
         self.collectionView.dataSource = self;
@@ -52,6 +52,4 @@ class CollectionViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int  {
         return 50
     }
-    
-    
 }

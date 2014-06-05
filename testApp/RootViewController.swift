@@ -58,6 +58,16 @@ class RootViewController: UIViewController {
         visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("H:|-20-[button]-20-|", views: buttonDic))
         visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("V:|-150-[button]", views: buttonDic))
         
+        var toCollectionViewButton = UIButton(frame: CGRectZero)
+        toCollectionViewButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        toCollectionViewButton.setTitle("To collection view", forState: UIControlState.Normal)
+        toCollectionViewButton.addTarget(self, action: "onCollectionViewButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        visualEffectView.contentView.addSubview(toCollectionViewButton)
+        
+        buttonDic = ["button": toCollectionViewButton]
+        visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("H:|-20-[button]-20-|", views: buttonDic))
+        visualEffectView.addConstraints(NSLayoutConstraint.simpleConstrain("V:|-200-[button]", views: buttonDic))
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +77,7 @@ class RootViewController: UIViewController {
     
     func toggleScale() {
         UIView.animateWithDuration(0.50, animations: {
-            var scale = self.toggled ? 1.0 : 0.50
+            var scale: Float = self.toggled ? 1.0 : 0.50
             self.imageView.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale)
             self.imageView.center = self.view.center
         })
@@ -75,6 +85,11 @@ class RootViewController: UIViewController {
     
     func onButton(sender: AnyObject) {
         self.toggled = !self.toggled
+    }
+    
+    func onCollectionViewButton(sender: AnyObject) {
+        var controller = CollectionViewController(nibName: nil, bundle: nil)
+        self.navigationController.pushViewController(controller, animated: true)
     }
     
     func onSearchButton(sender: AnyObject) {

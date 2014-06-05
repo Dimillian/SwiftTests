@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13E9" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
@@ -16,18 +16,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="320" translatesAutoresizingMaskIntoConstraints="NO" id="GcN-lo-r42">
-                                <rect key="frame" x="0.0" y="-5" width="320" height="83"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0Y-WS-enf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="EdT-kc-gtk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.20000000000000001" blue="0.1843137255" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="GcN-lo-r42" secondAttribute="bottom" constant="5" id="13W-DQ-K0a"/>
-                            <constraint firstAttribute="height" secondItem="GcN-lo-r42" secondAttribute="height" id="PNU-4D-z2n"/>
-                            <constraint firstItem="GcN-lo-r42" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="QEz-Un-nLk"/>
-                            <constraint firstAttribute="width" secondItem="GcN-lo-r42" secondAttribute="width" id="Zed-3g-por"/>
+                            <constraint firstItem="y0Y-WS-enf" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="1x4-d0-EiB"/>
+                            <constraint firstItem="y0Y-WS-enf" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="3XZ-NW-gU6"/>
+                            <constraint firstItem="y0Y-WS-enf" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="CIR-jh-H3F"/>
+                            <constraint firstItem="y0Y-WS-enf" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" id="Vj5-6o-f6j"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -36,6 +39,10 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="83"/>
+                    <connections>
+                        <outlet property="label" destination="y0Y-WS-enf" id="ojJ-Y8-MdL"/>
+                        <outlet property="widgetLabel" destination="y0Y-WS-enf" id="Osq-s2-9Jm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
